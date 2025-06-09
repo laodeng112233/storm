@@ -18,5 +18,5 @@ hostname = ih2.ireader.com
 
 *******************************/
 var body=$response.body;
-body = body.replace(/"ProductID\\\":\\".*?"/g,'"ProductID\\":\\"consumable1\\"');
+body = body.replace(/"ProductID\\\":\\".*?"/g,'"ProductID\\":\\"consumable14\\"');
 $done(body);
