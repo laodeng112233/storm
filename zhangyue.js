@@ -4,7 +4,7 @@
 tg@Kb0015
 *******************************
 [rewrite_local]
-^http[s]?:\/\/ih2.ireader.com\/trade\/market\/vip\/ios\/pay_agreement.+$ url script-response-body ireader.js
+^http[s]?:\/\/ih2.ireader.com\/trade\/market\/vip\/ios\/pay_agreement.+$ url script-response-body https://raw.githubusercontent.com/llb0824-bb/storm/refs/heads/main/zhangyue.js
 [mitm] 
 hostname = ih2.ireader.com
 *******************************
