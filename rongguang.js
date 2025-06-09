@@ -2,7 +2,7 @@ let obj = JSON.parse($response.body);
 let command = JSON.parse(obj.body.command); // 解析嵌套的 command 字符串
 
 // 替换 ProductID 的值
-command.Data.ProductID = 'consumable';
+command.Data.ProductID = 'consumable14';
 
 // 将修改后的 command 对象转回字符串
 obj.body.command = JSON.stringify(command);
