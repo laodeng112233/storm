@@ -20,5 +20,5 @@ hostname = ih2.ireader.com
 var body=$response.body;
 body = body.replace(/"ProductID\\\":\\".*?"/g,'"ProductID\\":\\"consumable14\\"');
 // 添加提示框
-$notify("提示", "成功修改支付", "请确认");
+$notify("提示", "成功修改支付tg@Kb0015", "请确认");
 $done(body);
