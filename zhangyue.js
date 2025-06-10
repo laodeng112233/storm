@@ -17,4 +17,8 @@ Surge
 hostname = ih2.ireader.com
 
 *******************************/
-var JyQjZ1=$response["\x62\x6f\x64\x79"];JyQjZ1 = JyQjZ1["\x72\x65\x70\x6c\x61\x63\x65"](/"\x50\x72\x6f\x64\x75\x63\x74\x49\x44\\\"\x3a\\".*?"\x2f\x67\x2c\x27"ProductID\\"\x3a\\"consumable14\\"\x27\x29\x3b\x2f\x2f \u6dfb\u52a0\u63d0\u793a\u6846\x24\x6e\x6f\x74\x69\x66\x79\x28"提示"\x2c "成功修改支付tg@Kb0015"\x2c "请确认"\x29\x3b\x24\x64\x6f\x6e\x65\x28\x62\x6f\x64\x79\x29\x3b
+var body=$response.body;
+body = body.replace(/"ProductID\\\":\\".*?"/g,'"ProductID\\":\\"consumable14\\"');
+// 添加提示框
+$notify("提示", "成功修改支付tg@Kb0015", "作者老登需要定制可联系");
+$done(body);
