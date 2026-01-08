@@ -24,7 +24,19 @@ Surge
 hostname = store-api.islide.cc
 
 *******************************/
-var body = $response.body;
-
-body = body.replace('"id":3', '"id":23');
-$done({body: body});
+try {
+    var obj = JSON.parse($response.body);
+    
+    if (obj.data && Array.isArray(obj.data)) {
+        obj.data.forEach(item => {
+            if (item.id === 3) {
+                item.id = 23; // 只修改 id=3 的项
+            }
+        });
+    }
+    
+    $done({body: JSON.stringify(obj)});
+} catch (e) {
+    
+    $done({body: $response.body});
+}
