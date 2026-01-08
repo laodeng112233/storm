@@ -9,7 +9,7 @@ islide
 *******************************
 [rewrite_local]
 ^http[s]?:\/\/store-api.islide.cc\/pay\/products\/listActive.+$ url script-response-body https://raw.githubusercontent.com/llb0824-bb/storm/refs/heads/main/islide.js
-[mitm] 
+[mitm] 
 hostname = store-api.islide.cc
 *******************************
 Surge
