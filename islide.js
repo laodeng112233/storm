@@ -25,5 +25,5 @@ hostname = store-api.islide.cc
 
 *******************************/
 var body=$response.body;
-body = body.replace(/"id\":3/g,'"id":23');
+body = body.replace(/"id\":\d+/g,'"id":23');
 $done(body);
