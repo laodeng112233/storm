@@ -21,7 +21,6 @@ Surge
 hostname = store-api.islide.cc
 
 *******************************/
-var body=$response.body;
-body = body.replace(/"id\":3/g,'"id":23');
-$done(body);
-
+var obj = JSON.parse($response.body);
+    obj.data.id= 23;
+    $done({body: JSON.stringify(obj)});
