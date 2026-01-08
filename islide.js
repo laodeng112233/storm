@@ -8,9 +8,12 @@ islide
 群1077223830
 *******************************
 [rewrite_local]
-^http[s]s:\/\/store-api\.islide\.cc\/pay\/products\/listActive url script-response-body https://raw.githubusercontent.com/llb0824-bb/storm/refs/heads/main/islide.js
-[mitm] 
+^https?:\/\/store-api\.islide\.cc\/pay\/products\/listActive.*? url script-response-body https://raw.githubusercontent.com/llb0824-bb/storm/refs/heads/main/islide.js
+
+
+[mitm]
 hostname = store-api.islide.cc
+
 *******************************
 Surge
 
