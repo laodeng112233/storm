@@ -8,7 +8,7 @@
 群1077223830
 *******************************
 [rewrite_local]
-^https?:\/\/quanyiapi.chengquan.cn\/wx_web\/agent\/integral\/product\/queryDetails\/19003764.+$ url script-response-body chengquan.js
+^https?:\/\/quanyiapi.chengquan.cn\/wx_web\/agent\/integral\/product\/queryDetails\/19003764.+$ url script-response-body https://raw.githubusercontent.com/llb0824-bb/storm/refs/heads/main/ceshi1
 [mitm] 
 hostname = quanyiapi.chengquan.cn
 *******************************
