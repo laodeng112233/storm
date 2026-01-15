@@ -9,7 +9,7 @@
 *******************************
 [rewrite_local]
 # 匹配目标接口（数据包中的 order/generalCreate 接口），请求体修改用 http-request
-^https?:\/\/api\.ankianki\.com\/user\/order\/generalCreate.*? http-request script-path=https://raw.githubusercontent.com/llb0824-bb/storm/refs/heads/main/ksb.js
+https?:\/\/api\.ankianki\.com\/user\/order\/generalCreate.*? url script-response-body https://raw.githubusercontent.com/llb0824-bb/storm/refs/heads/main/ksb.js
 [mitm]
 hostname = *.ankianki.com
 
