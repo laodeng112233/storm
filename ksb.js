@@ -21,6 +21,19 @@ Surge
 hostname = *.ankianki.*
 
 *******************************/
-var obj = JSON.parse($response.body);
-    obj.data.{code= "EY85FaXubNaRRYtKfReg6A=="};
-    $done({body: JSON.stringify(obj)});
+// 直接替换响应体为你指定的JSON内容
+var targetResponse = {
+    "code": "200",
+    "data": "1",
+    "time": "1768515146",
+    "encrypt": "EY85FaXubNaRRYtKfReg6A=="
+};
+
+// 转换为JSON字符串并提交
+$done({
+    body: JSON.stringify(targetResponse)
+});
+
+// 日志输出（验证替换结果）
+console.log("✅ 响应体已替换为目标值");
+console.log("替换后响应：" + JSON.stringify(targetResponse));
