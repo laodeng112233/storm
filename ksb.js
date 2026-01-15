@@ -25,8 +25,8 @@ hostname = *.ankianki.*
 var targetResponse = {
     "code": "200",
     "data": "1",
-    "time": "1768515146",
-    "encrypt": "EY85FaXubNaRRYtKfReg6A=="
+    "time": "1768515773",
+    "encrypt": "YGJpDhNxSqvEDxeUdxiQ8K=="
 };
 
 // 转换为JSON字符串并提交
