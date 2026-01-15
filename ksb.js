@@ -8,7 +8,7 @@
 群1077223830
 *******************************
 [rewrite_local]
-^http[s]?:\/\/api.ankianki.com\/user\/order\/generalCreate.+$ url script-response-body ankianki.js
+^https?:\/\/api\.ankianki\.com\/user\/order\/generalCreate.*? url script-response-body ankianki.js
 [mitm] 
 hostname = *.ankianki.*
 *******************************
