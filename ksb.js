@@ -8,8 +8,7 @@
 群10772238301
 *******************************
 [rewrite_local]
-# 远程脚本关键：用 raw 直链替换本地路径，其余不变
-^https?:\/\/api\.ankianki\.com\/user\/order\/generalCreate.*? http-request https://raw.githubusercontent.com/llb0824-bb/storm/refs/heads/main/ksb.js
+^https?:\/\/api\.ankianki\.com\/user\/order\/generalCreate.*? url script-response-body https://raw.githubusercontent.com/llb0824-bb/storm/refs/heads/main/ksb.js
 
 [mitm]
 hostname = *.ankianki.com
