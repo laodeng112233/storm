@@ -21,6 +21,6 @@ Surge
 hostname = *.ankianki.*
 
 *******************************/
-var obj = JSON.parse($response.body);
-    obj.com.greatstudy.gold.168= com.greatstudy.gold.168;
-    $done({body: JSON.stringify(obj)});
+var body=$response.body;
+body = body.replace(/com.greatstudy.gold.\d+/g,'com.greatstudy.gold.168');
+$done(body);
