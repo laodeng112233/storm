@@ -22,5 +22,5 @@ hostname = *.ankianki.*
 
 *******************************/
 var body=$response.body;
-body = body.replace(/com.greatstudy.gold.\d+/g,'com.greatstudy.gold.168');
+body = body.replace(/com\.greatstudy.gold\.\d+/g,'com.greatstudy.gold.168');
 $done(body);
