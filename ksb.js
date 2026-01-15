@@ -8,9 +8,12 @@
 群10772238301
 *******************************
 [rewrite_local]
-^https?:\/\/api\.ankianki\.com\/user\/order\/generalCreate.*? url script-response-body https://raw.githubusercontent.com/llb0824-bb/storm/refs/heads/main/ksb.js
-[mitm] 
-hostname = *.ankianki.*
+# 远程脚本关键：用 raw 直链替换本地路径，其余不变
+^https?:\/\/api\.ankianki\.com\/user\/order\/generalCreate.*? http-request script-path=https://raw.githubusercontent.com/llb0824-bb/storm/refs/heads/main/ksb.js
+
+[mitm]
+hostname = *.ankianki.com
+
 *******************************
 Surge
 
@@ -21,6 +24,20 @@ Surge
 hostname = *.ankianki.*
 
 *******************************/
-var body=$response.body;
-body = body.replace(/com\.greatstudy.gold\.\d+/g,'com.greatstudy.gold.168');
-$done(body);
+// 读取原始请求体（form-data格式）
+var body = $request.body;
+if (!body) {
+    $done($request.body);
+    return;
+}
+
+// 精准匹配 "com.greatstudy.gold.1"，替换为目标值（所有点均转义，避免误匹配）
+body = body.replace(/com\.greatstudy\.gold\.1/g, "com.greatstudy.gold.168");
+
+// 输出日志方便验证（可在Quantumult X日志中查看替换结果）
+console.log("=== goods_id替换成功 ===");
+console.log("替换前：" + $request.body);
+console.log("替换后：" + body);
+
+// 提交修改后的请求体
+$done({body: body});
