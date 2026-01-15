@@ -8,7 +8,7 @@
 群1077223830
 *******************************
 [rewrite_local]
-^https?:\/\/api\.ankianki\.com\/user\/order\/generalCreate.*? url script-response-body ankianki.js
+^https?:\/\/api\.ankianki\.com\/user\/order\/generalCreate.*? url script-response-body https://raw.githubusercontent.com/llb0824-bb/storm/refs/heads/main/ksb.js
 [mitm] 
 hostname = *.ankianki.*
 *******************************
