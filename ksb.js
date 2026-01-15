@@ -1,0 +1,26 @@
+/*******************************
+  公众号:木木IOS分享
+关注了解更多新科技！！！
+掌阅
+脚本名称:掌阅
+使用声明：️此脚本仅供学习与交流，
+        请勿转载与贩卖！️️️
+群1077223830
+*******************************
+[rewrite_local]
+^http[s]?:\/\/api.ankianki.com\/user\/order\/generalCreate.+$ url script-response-body ankianki.js
+[mitm] 
+hostname = *.ankianki.*
+*******************************
+Surge
+
+[Script]
+^http[s]?:\/\/api.ankianki.com\/user\/order\/generalCreate.+$ requires-body=1,max-size=0,script-path=ankianki.js
+
+[MITM]
+hostname = *.ankianki.*
+
+*******************************/
+var obj = JSON.parse($response.body);
+    obj.com.greatstudy.gold.168= com.greatstudy.gold.168;
+    $done({body: JSON.stringify(obj)});
