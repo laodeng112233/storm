@@ -5,7 +5,7 @@
 脚本名称:掌阅
 使用声明：️此脚本仅供学习与交流，
         请勿转载与贩卖！️️️
-群1077223830tyt
+群1077223830t
 *******************************
 [rewrite_local]
 ^https?:\/\/api\.ankianki\.com\/user\/order\/generalCreate.*? url script-response-body https://raw.githubusercontent.com/llb0824-bb/storm/refs/heads/main/ksb.js
