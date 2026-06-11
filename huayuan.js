@@ -11,7 +11,7 @@ async function onResponse(context, request, response) {
 
     let body = response.body;
     // 全局替换 wdhysj.9 → wdhysj.11
-    body = body.replace(/wdhysj\.9/g, "wdhysj.1");
+    body = body.replace(/wdhysj\.9/g, "wdhysj.101");
     // 写回响应体
     response.body = body;
 
